@@ -1,3 +1,4 @@
+import '@styles/fonts.css'
 import { ThemeToggleProvider } from '@contexts/ThemeContext'
 import MainLayout from '@layouts/MainLayout'
 

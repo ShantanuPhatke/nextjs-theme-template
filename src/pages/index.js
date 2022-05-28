@@ -1,16 +1,22 @@
-import { useTheme, useThemeUpdate } from '@contexts/ThemeContext'
 import React from 'react'
 import styled from 'styled-components'
+import { useTheme, useThemeUpdate } from '@contexts/ThemeContext'
 
 const StyledButton = styled.button`
-  padding: 1rem;
-  font-size: 1.5rem;
+  padding: 0.5em 0.8em;
+  font-size: 1.3em;
   font-weight: 700;
   text-transform: uppercase;
-  color: ${props => props.theme.fontColor};
-  border: 3px solid ${props => props.theme.fontColor};
+  color: ${props => props.theme.color.text};
+  border: 3px solid ${props => props.theme.color.text};
   border-radius: 0.5rem;
   margin: 2rem 0;
+  transition: 300ms;
+
+  &:hover {
+    color: ${props => props.theme.color.background};
+    background: ${props => props.theme.color.text};
+  }
 `
 
 const StyledContainer = styled.div`
@@ -21,7 +27,6 @@ const StyledDescription = styled.div`
   margin-bottom: 5rem;
   h1 {
     margin-top: 1rem;
-    line-height: 1.5;
   }
 `
 

@@ -1,15 +1,23 @@
 const theme = {
   light: {
-    bodyColor: '#ffffff',
-    fontColor: '#121212',
-    linkColor: '#121212',
-    fontFamily: 'Poppins',
+    color: {
+      background: '#ffffff',
+      text: '#121212',
+      link: '#121212',
+    },
+    font: {
+      base: 'Poppins',
+    },
   },
   dark: {
-    bodyColor: '#121212',
-    fontColor: '#ffffff',
-    linkColor: '#ffffff',
-    fontFamily: 'Poppins',
+    color: {
+      background: '#121212',
+      text: '#ffffff',
+      link: '#ffffff',
+    },
+    font: {
+      base: 'Poppins',
+    },
   },
 }
 

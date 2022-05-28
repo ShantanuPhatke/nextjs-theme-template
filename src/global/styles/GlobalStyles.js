@@ -1,10 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
-    @fontface {
-        font-family: 'Poppins';
-        src: url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap')
-    }
     * {
         box-sizing: border-box;
     }
@@ -15,9 +11,10 @@ const GlobalStyles = createGlobalStyle`
         width: 100%;
     }
     body {
-        background-color: ${props => props.theme.bodyColor};
-        color: ${props => props.theme.fontColor};
-        font-family: ${props => props.theme.fontFamily};
+        background-color: ${props => props.theme.color.background};
+        color: ${props => props.theme.color.text};
+        font-family: ${props => props.theme.font.base};
+        font-size: 1.25rem;
         
         #__next {
             display: flex;
@@ -29,18 +26,19 @@ const GlobalStyles = createGlobalStyle`
     }
 
     h1, h2, h3, h4, h5, p, a, button {
-        line-height: 1;
+        line-height: 1.5;
         margin: 0;
         padding: 0;
     }
 
     a {
-        color: ${props => props.theme.linkColor};
-        text-decoration-color: ${props => props.theme.linkColor};
+        color: ${props => props.theme.color.link};
+        text-decoration-color: currentColor;
     }
 
     button {
-        font-family: ${props => props.theme.fontFamily};
+        line-height: 1;
+        font-family: ${props => props.theme.font.base};
         cursor: pointer;
         background: transparent;
     }
